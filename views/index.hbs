@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+{{#if conocido}}
+<p style="color: black; font-weight: bolder;">Hola {{nombre}}
+    <br>
+    <br>
+    <a style="color:blue; font-weight: bolder;" href="/salir">Salir de la página</a>
+    </p>
+{{/if}}
+
+{{#unless conocido}}
+<p style="color: rgb(247, 63, 124); font-weight: bolder;">No te conozco <br><br> Ingresá tu nombre para acceder a la página</p>
+<br>
+<form action="/ingresar" method="post">
+<input type="text" name="nombre">
+<br>
+<br>
+<button style="color: blue; font-weight: bolder;">Ingresar</button>
+</form>
+{{/unless}}
+
